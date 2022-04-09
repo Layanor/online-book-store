@@ -1,0 +1,361 @@
+<html lang="en"><head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Admin</title>
+
+    <!-- bootstrap 5 CDN-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <!-- bootstrap 5 Js bundle CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+</head>
+<body data-new-gr-c-s-check-loaded="14.1056.0" data-gr-ext-installed="">
+	<div class="container">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		  <div class="container-fluid">
+		    <a class="navbar-brand" href="admin.php">Admin</a>
+		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+		        <li class="nav-item">
+		          <a class="nav-link" aria-current="page" href="index.php">Store</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="add-book.php">Add Book</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="add-category.php">Add Category</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="add-author.php">Add Author</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="logout.php">Logout</a>
+		        </li>
+		      </ul>
+		    </div>
+		  </div>
+		</nav>
+
+       <div class="mt-5"></div>
+        		
+
+        
+
+        <!-- List of all books -->
+		<h4>All Books</h4>
+		<table class="table table-bordered shadow">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Title</th>
+					<th>Author</th>
+					<th>Description</th>
+					<th>Category</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+			  			  <tr>
+				<td>1</td>
+				<td>
+					<img width="100" src="./img/Aru Shah and the Nectar of Immortality.jpg" >
+					<a class="link-dark d-block
+					           text-center" href="uploads/files/6250eccc5e5da1.69577508.pdf">
+					   Aru Shah and the Nectar of Immortality 	
+					</a>
+						
+				</td>
+				<td>
+					Roshani Chokshi
+				</td>
+				<td>Best-selling author Rick Riordan presents the breathtaking conclusion to Roshani Chokshi's New York Times best-selling Pandava quintet. Will the Sleeper gain immortality or be stopped once and for all?</td>
+				<td>
+					Fairy Tales , Folk Tales &amp; myths				</td>
+				<td>
+					<a href="edit-book.php?id=6" class="btn btn-warning">
+					   Edit</a>
+
+					<a href="php/delete-book.php?id=6" class="btn btn-danger">
+				       Delete</a>
+				</td>
+			  </tr>
+			  			  <tr>
+				<td>2</td>
+				<td>
+					<img width="100" src="./img/The Complete Cookbook for Young Chefs.jpg">
+					<a class="link-dark d-block
+					           text-center" href="uploads/files/6250ec8d79ee99.87686562.pdf">
+					   The Complete Cookbook for Young Chefs	
+					</a>
+						
+				</td>
+				<td>
+					America's Test Kitchen Kids
+				</td>
+				<td>Want to bake the most-awesome-ever cupcakes? Or surprise your family with breakfast tacos on Sunday morning? Looking for a quick snack after school? Or maybe something special for a sleepover? It's all here. Learn to cook like a pro―it's easier than you think.</td>
+				<td>
+					Literature&amp;Fiction				</td>
+				<td>
+					<a href="edit-book.php?id=5" class="btn btn-warning">
+					   Edit</a>
+
+					<a href="php/delete-book.php?id=5" class="btn btn-danger">
+				       Delete</a>
+				</td>
+			  </tr>
+			  			  <tr>
+				<td>3</td>
+				<td>
+					<img width="100" src="./img/The Very Hungry Caterpillar.png" >
+					<a class="link-dark d-block
+					           text-center" href="uploads/files/6250ebd90995e5.71674474.pdf">
+					   The Very Hungry Caterpillar	
+					</a>
+						
+				</td>
+				<td>
+					Emily Calandrelli
+				</td>
+				<td>THE all-time classic picture book, from generation to generation, sold somewhere in the world every 30 seconds! A sturdy and beautiful book to give as a gift for new babies, baby showers, birthdays, and other new beginnings!</td>
+				<td>
+					Animals				</td>
+				<td>
+					<a href="edit-book.php?id=4" class="btn btn-warning">
+					   Edit</a>
+
+					<a href="php/delete-book.php?id=4" class="btn btn-danger">
+				       Delete</a>
+				</td>
+			  </tr>
+			  			  <tr>
+				<td>4</td>
+				<td>
+					<img width="100" src="./img/School Zone - First Grade Big Learning Tablet Workbook.jpg" >
+					<a class="link-dark d-block
+					           text-center" href="uploads/files/6250eb559b4ec6.52483182.pdf">
+					   School Zone - First Grade Big Learning Tablet Workbook	
+					</a>
+						
+				</td>
+				<td>
+					Joan Hoffman
+				</td>
+				<td>This one great big tablet gives children hours of colorful 1st grade learning! With the creative, colorful pages of skill-building activities in Big First Grade Learning Tablet, first-graders are introduced to a variety of lessons that expand problem solving and careful observation. By teaching critical thinking skills, primary phonics, beginner reading comprehension, and more, this great tablet prepares first graders for what comes next. It also makes a great addition and subtraction workbook, teaching kids basic math skills through fun educational games. Boost confidence and celebrate achievement with more than 20 adorable reward stickers. Who wouldn't like to adorn their work with a glowing light bulb proclaiming they are "Brilliant!"? This kind of enjoyable reinforcement learning is perfect as both a school aid, or as a great addition to kids homeschool teaching. The vertical, portrait-oriented cover makes for easy shelving or dropping into a backpack, and because it lays flat, left-handed writers will have free space on the left side.</td>
+				<td>
+					Education&amp;reference				</td>
+				<td>
+					<a href="edit-book.php?id=3" class="btn btn-warning">
+					   Edit</a>
+
+					<a href="php/delete-book.php?id=3" class="btn btn-danger">
+				       Delete</a>
+				</td>
+			  </tr>
+			  			  <tr>
+				<td>5</td>
+				<td>
+					<img width="100" src="./img/Reach for the Stars.jpg" >
+					<a class="link-dark d-block
+					           text-center" href="uploads/files/6250eadbe51ce0.07208854.pdf">
+					   Reach for the Stars 	
+					</a>
+						
+				</td>
+				<td>
+					Emily Calandrelli
+				</td>
+				<td>From Emmy-nominated science TV star and host of Netflix’s hit series Emily’s Wonder Lab Emily Calandrelli comes an inspirational message of love and positivity.  From the moment we are born, we reach out. We reach out for our loved ones, for new knowledge and experiences, and for our dreams!  Whether celebrating life’s joyous milestones, sharing words of encouragement, or observing the wonder of the world around us, this uplifting book will inspire readers of every age. A celebration of love and shared discovery, this book will encourage readers to reach for the stars!</td>
+				<td>
+					Arts,Music&amp;photography				</td>
+				<td>
+					<a href="edit-book.php?id=2" class="btn btn-warning">
+					   Edit</a>
+
+					<a href="php/delete-book.php?id=2" class="btn btn-danger">
+				       Delete</a>
+				</td>
+			  </tr>
+			  			  <tr>
+				<td>6</td>
+				<td>
+					<img width="100"src="./img/Brain Games - Sticker Activity- There Was an Old Lady Who Swallowed the Alphabet!.jpg" >
+					<a class="link-dark d-block
+					           text-center" href="uploads/files/6250e9bb500299.63726277.pdf">
+					   Brain Games - Sticker Activity: There Was an Old Lady Who Swallowed the Alphabet!	
+					</a>
+						
+				</td>
+				<td>
+					Publications International Ltd.
+				</td>
+				<td> Introduce children to the alphabet in a fun, interactive way with this sticker activity book! Discover 27 activities and more than 150 stickers. Activities include matching pictures and words, finding missing letters that start the words, and adding stickers to finish the picture. Activities are in the front of the book and the corresponding stickers are in the back. Many bonus stickers are found in the book.  Children ages 3 and up will love the colorful, whimsical illustrations on each page. Follow along as the old lady makes a meal of the alphabet, one letter at a time.  The spiral binding allows the book to lie flat for easy use. 52 pages</td>
+				<td>
+					Activity , crafts &amp; games				</td>
+				<td>
+					<a href="edit-book.php?id=1" class="btn btn-warning">
+					   Edit</a>
+
+					<a href="php/delete-book.php?id=1" class="btn btn-danger">
+				       Delete</a>
+				</td>
+			  </tr>
+			  			</tbody>
+		</table>
+	   
+        	    <!-- List of all categories -->
+		<h4 class="mt-5">All Categories</h4>
+		<table class="table table-bordered shadow">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Category Name</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+								<tr>
+					<td>1</td>
+					<td>Activity , crafts &amp; games</td>
+					<td>
+						<a href="edit-category.php?id=1" class="btn btn-warning">
+						   Edit</a>
+
+						<a href="php/delete-category.php?id=1" class="btn btn-danger">
+					       Delete</a>
+					</td>
+				</tr>
+			    				<tr>
+					<td>2</td>
+					<td>Literature&amp;Fiction</td>
+					<td>
+						<a href="edit-category.php?id=2" class="btn btn-warning">
+						   Edit</a>
+
+						<a href="php/delete-category.php?id=2" class="btn btn-danger">
+					       Delete</a>
+					</td>
+				</tr>
+			    				<tr>
+					<td>3</td>
+					<td>Education&amp;reference</td>
+					<td>
+						<a href="edit-category.php?id=3" class="btn btn-warning">
+						   Edit</a>
+
+						<a href="php/delete-category.php?id=3" class="btn btn-danger">
+					       Delete</a>
+					</td>
+				</tr>
+			    				<tr>
+					<td>4</td>
+					<td>Animals</td>
+					<td>
+						<a href="edit-category.php?id=4" class="btn btn-warning">
+						   Edit</a>
+
+						<a href="php/delete-category.php?id=4" class="btn btn-danger">
+					       Delete</a>
+					</td>
+				</tr>
+			    				<tr>
+					<td>5</td>
+					<td>Arts,Music&amp;photography</td>
+					<td>
+						<a href="edit-category.php?id=5" class="btn btn-warning">
+						   Edit</a>
+
+						<a href="php/delete-category.php?id=5" class="btn btn-danger">
+					       Delete</a>
+					</td>
+				</tr>
+			    				<tr>
+					<td>6</td>
+					<td>Fairy Tales , Folk Tales &amp; myths</td>
+					<td>
+						<a href="edit-category.php?id=6" class="btn btn-warning">
+						   Edit</a>
+
+						<a href="php/delete-category.php?id=6" class="btn btn-danger">
+					       Delete</a>
+					</td>
+				</tr>
+			    			</tbody>
+		</table>
+	    
+	    	    <!-- List of all Authors -->
+		<h4 class="mt-5">All Authors</h4>
+         <table class="table table-bordered shadow">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Author Name</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+								<tr>
+					<td>1</td>
+					<td>Publications International Ltd.</td>
+					<td>
+						<a href="edit-author.php?id=1" class="btn btn-warning">
+						   Edit</a>
+
+						<a href="php/delete-author.php?id=1" class="btn btn-danger">
+					       Delete</a>
+					</td>
+				</tr>
+			    				<tr>
+					<td>2</td>
+					<td>Emily Calandrelli</td>
+					<td>
+						<a href="edit-author.php?id=2" class="btn btn-warning">
+						   Edit</a>
+
+						<a href="php/delete-author.php?id=2" class="btn btn-danger">
+					       Delete</a>
+					</td>
+				</tr>
+			    				<tr>
+					<td>3</td>
+					<td>Joan Hoffman</td>
+					<td>
+						<a href="edit-author.php?id=3" class="btn btn-warning">
+						   Edit</a>
+
+						<a href="php/delete-author.php?id=3" class="btn btn-danger">
+					       Delete</a>
+					</td>
+				</tr>
+			    				<tr>
+					<td>4</td>
+					<td>Roshani Chokshi</td>
+					<td>
+						<a href="edit-author.php?id=4" class="btn btn-warning">
+						   Edit</a>
+
+						<a href="php/delete-author.php?id=4" class="btn btn-danger">
+					       Delete</a>
+					</td>
+				</tr>
+			    				<tr>
+					<td>5</td>
+					<td>America's Test Kitchen Kids</td>
+					<td>
+						<a href="edit-author.php?id=5" class="btn btn-warning">
+						   Edit</a>
+
+						<a href="php/delete-author.php?id=5" class="btn btn-danger">
+					       Delete</a>
+					</td>
+				</tr>
+			    			</tbody>
+		</table> 
+			</div>
+
+
+
+</body></html>

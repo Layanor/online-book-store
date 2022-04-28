@@ -41,6 +41,7 @@ $current_category = get_category($conn, $id);
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="My-colors.css">
 
 </head>
 <body>
@@ -132,12 +133,8 @@ $current_category = get_category($conn, $id);
 								<?php } ?>
 							<br></b></i>
 						</p>
-                       <a href="uploads/files/<?=$book['file']?>"
-                          class="btn btn-success">Open</a>
-
-                        <a href="uploads/files/<?=$book['file']?>"
-                          class="btn btn-primary"
-                          download="<?=$book['title']?>">Download</a>
+                           <a href="<?=$book['title']?>.php"
+                          class="btn btn-blue">Reviews</a>
 					</div>
 				</div>
 				<?php } ?>
@@ -151,29 +148,16 @@ $current_category = get_category($conn, $id);
 					// do nothing
 				}else{ ?>
 				<a href="#"
-				   class="list-group-item list-group-item-action active">Category</a>
+				   class="list-group-item list-group-item-action active list-group-item-blue">Category</a>
 				   <?php foreach ($categories as $category ) {?>
 				  
 				   <a href="category.php?id=<?=$category['id']?>"
-				      class="list-group-item list-group-item-action">
+				      class="list-group-item-blue list-group-item list-group-item-action">
 				      <?=$category['name']?></a>
 				<?php } } ?>
 			</div>
 
-			<!-- List of authors -->
-			<div class="list-group mt-5">
-				<?php if ($authors == 0){
-					// do nothing
-				}else{ ?>
-				<a href="#"
-				   class="list-group-item list-group-item-action active">Author</a>
-				   <?php foreach ($authors as $author ) {?>
-				  
-				   <a href="author.php?id=<?=$author['id']?>"
-				      class="list-group-item list-group-item-action">
-				      <?=$author['name']?></a>
-				<?php } } ?>
-			</div>
+			
 		</div>
 		</div>
 	</div>

@@ -12,9 +12,7 @@ if (isset($_SESSION['user_id']) &&
 	include "php/func-book.php";
     $books = get_all_books($conn);
 
-    # author helper function
-	include "php/func-author.php";
-    $authors = get_all_author($conn);
+
 
     # Category helper function
 	include "php/func-category.php";
@@ -40,7 +38,7 @@ if (isset($_SESSION['user_id']) &&
 	<div class="container">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		  <div class="container-fluid">
-		    <a class="navbar-brand" href="admin.php">Admin</a>
+		    <a class="navbar-brand" href="index.php"><img src="img/bibliophilia (3).png" alt="logo" width="150" height="150" ></a>
 		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		      <span class="navbar-toggler-icon"></span>
 		    </button>
@@ -50,7 +48,7 @@ if (isset($_SESSION['user_id']) &&
 		        <li class="nav-item">
 		          <a class="nav-link" 
 		             aria-current="page" 
-		             href="index.php">Store</a>
+		             href="index.php">Books</a>
 		        </li>
 		        <li class="nav-item">
 		          <a class="nav-link" 
@@ -60,10 +58,7 @@ if (isset($_SESSION['user_id']) &&
 		          <a class="nav-link" 
 		             href="add-category.php">Add Category</a>
 		        </li>
-		        <li class="nav-item">
-		          <a class="nav-link" 
-		             href="add-author.php">Add Author</a>
-		        </li>
+		        
 		        <li class="nav-item">
 		          <a class="nav-link" 
 		             href="logout.php">Logout</a>
@@ -72,27 +67,7 @@ if (isset($_SESSION['user_id']) &&
 		    </div>
 		  </div>
 		</nav>
-       <form action="search.php"
-             method="get" 
-             style="width: 100%; max-width: 30rem">
-
-       	<div class="input-group my-5">
-		  <input type="text" 
-		         class="form-control"
-		         name="key" 
-		         placeholder="Search Book..." 
-		         aria-label="Search Book..." 
-		         aria-describedby="basic-addon2">
-
-		  <button class="input-group-text
-		                 btn btn-primary" 
-		          id="basic-addon2">
-		          <img src="img/search.png"
-		               width="20">
-
-		  </button>
-		</div>
-       </form>
+     
        <div class="mt-5"></div>
         <?php if (isset($_GET['error'])) { ?>
           <div class="alert alert-danger" role="alert">
@@ -140,13 +115,11 @@ if (isset($_SESSION['user_id']) &&
 			  <tr>
 				<td><?=$i?></td>
 				<td>
-					<img width="100"
-					     src="uploads/cover/<?=$book['cover']?>" >
-					<a  class="link-dark d-block
-					           text-center"
-					    href="uploads/files/<?=$book['file']?>">
+					<img width="100%"
+					     src="<?=$book['cover']?>" >
+					
 					   <?=$book['title']?>	
-					</a>
+				
 						
 				</td>
 				<td>
@@ -177,11 +150,11 @@ if (isset($_SESSION['user_id']) &&
 				</td>
 				<td>
 					<a href="edit-book.php?id=<?=$book['id']?>" 
-					   class="btn btn-warning">
-					   Edit</a>
+					   class="btn btn-warning mt-3" style="width: 100%;">
+					   Update</a>
 
 					<a href="php/delete-book.php?id=<?=$book['id']?>" 
-					   class="btn btn-danger">
+					   style="width: 100%;" class="btn btn-danger mt-3">
 				       Delete</a>
 				</td>
 			  </tr>
@@ -222,11 +195,9 @@ if (isset($_SESSION['user_id']) &&
 					<td>
 						<a href="edit-category.php?id=<?=$category['id']?>" 
 						   class="btn btn-warning">
-						   Edit</a>
+						   Update</a>
 
-						<a href="php/delete-category.php?id=<?=$category['id']?>" 
-						   class="btn btn-danger">
-					       Delete</a>
+						
 					</td>
 				</tr>
 			    <?php } ?>
@@ -234,49 +205,6 @@ if (isset($_SESSION['user_id']) &&
 		</table>
 	    <?php } ?>
 
-	    <?php  if ($authors == 0) { ?>
-        	<div class="alert alert-warning 
-        	            text-center p-5" 
-        	     role="alert">
-        	     <img src="img/empty.png" 
-        	          width="100">
-        	     <br>
-			  There is no author in the database
-		    </div>
-        <?php }else {?>
-	    <!-- List of all Authors -->
-		<h4 class="mt-5">All Authors</h4>
-         <table class="table table-bordered shadow">
-			<thead>
-				<tr>
-					<th>#</th>
-					<th>Author Name</th>
-					<th>Action</th>
-				</tr>
-			</thead>
-			<tbody>
-				<?php 
-				$k = 0;
-				foreach ($authors as $author ) {
-				$k++;	
-				?>
-				<tr>
-					<td><?=$k?></td>
-					<td><?=$author['name']?></td>
-					<td>
-						<a href="edit-author.php?id=<?=$author['id']?>" 
-						   class="btn btn-warning">
-						   Edit</a>
-
-						<a href="php/delete-author.php?id=<?=$author['id']?>" 
-						   class="btn btn-danger">
-					       Delete</a>
-					</td>
-				</tr>
-			    <?php } ?>
-			</tbody>
-		</table> 
-		<?php } ?>
 	</div>
 </body>
 </html>

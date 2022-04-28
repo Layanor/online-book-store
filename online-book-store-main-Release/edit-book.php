@@ -50,13 +50,14 @@ if (isset($_SESSION['user_id']) &&
 
     <!-- bootstrap 5 Js bundle CDN-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="My-colors.css">
 </head>
 <body>
 	<div class="container">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		  <div class="container-fluid">
-		    <a class="navbar-brand" href="admin.php">Admin</a>
+		    <a class="navbar-brand" href="index.php"><img src="img/bibliophilia (3).png" alt="logo" width="150" height="150" ></a>
 		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		      <span class="navbar-toggler-icon"></span>
 		    </button>
@@ -66,7 +67,7 @@ if (isset($_SESSION['user_id']) &&
 		        <li class="nav-item">
 		          <a class="nav-link" 
 		             aria-current="page" 
-		             href="index.php">Store</a>
+		             href="index.php">Books</a>
 		        </li>
 		        <li class="nav-item">
 		          <a class="nav-link" 
@@ -76,10 +77,7 @@ if (isset($_SESSION['user_id']) &&
 		          <a class="nav-link" 
 		             href="add-category.php">Add Category</a>
 		        </li>
-		        <li class="nav-item">
-		          <a class="nav-link" 
-		             href="add-author.php">Add Author</a>
-		        </li>
+		        
 		        <li class="nav-item">
 		          <a class="nav-link" 
 		             href="logout.php">Logout</a>
@@ -203,29 +201,13 @@ if (isset($_SESSION['user_id']) &&
 		           value="<?=$book['cover']?>" 
 		           name="current_cover">
 
-		    <a href="uploads/cover/<?=$book['cover']?>"
+		    <a href="<?=$book['cover']?>"
 		       class="link-dark">Current Cover</a>
 		</div>
 
-		<div class="mb-3">
-		    <label class="form-label">
-		           File
-		           </label>
-		    <input type="file" 
-		           class="form-control" 
-		           name="file">
-
-		     <input type="text" 
-		           hidden
-		           value="<?=$book['file']?>" 
-		           name="current_file">
-
-		    <a href="uploads/files/<?=$book['file']?>"
-		       class="link-dark">Current File</a>
-		</div>
-
+		
 	    <button type="submit" 
-	            class="btn btn-primary">
+	            class="btn btn-blue">
 	            Update</button>
      </form>
 	</div>

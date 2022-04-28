@@ -5,7 +5,7 @@ $sName = "localhost";
 # user name
 $uName = "root";
 # password
-$pass = "";
+$pass = "root";
 
 # database name
 $db_name = "online_book_store_db";

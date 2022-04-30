@@ -11,6 +11,9 @@ if (isset($_SESSION['user_id']) &&
     # Category helper function
 	include "php/func-category.php";
     $categories = get_all_categories($conn);
+# author helper function
+	include "php/func-author.php";
+    $authors = get_all_author($conn);
 
   
     if (isset($_GET['title'])) {

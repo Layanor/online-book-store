@@ -54,6 +54,10 @@ if (isset($_SESSION['user_id']) &&
 		          <a class="nav-link" 
 		             href="add-book.php">Add Book</a>
 		        </li>
+                          <li class="nav-item">
+                            <a class="nav-link" 
+                               href="add-author.php">Add Author</a>
+                        </li>
 		        <li class="nav-item">
 		          <a class="nav-link" 
 		             href="add-category.php">Add Category</a>

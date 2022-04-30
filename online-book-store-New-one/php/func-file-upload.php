@@ -31,19 +31,19 @@ function upload_file($files, $allowed_exs, $path){
 			$new_file_name = uniqid("",true).'.'.$file_ex_lc;
 
 			# assigning upload path
-			$file_upload_path = '../uploads/'.$path.'/'.$new_file_name;
+			//$file_upload_path = '../uploads/'.$path.'/'.$new_file_name;
 			/** 
 			  moving uploaded file to 
 			  root directory upload/$path folder
 			**/
-			move_uploaded_file($tmp_name, $file_upload_path);
+//			move_uploaded_file($tmp_name, $file_upload_path);
 
 			/**
                Creating success message associative array
                with named keys status and data
             **/
             $sm['status'] = 'success';
-	        $sm['data']   = $new_file_name;
+//	        $sm['data']   = $new_file_name;
 
 	        #  Return the sm array
 	        return $sm;

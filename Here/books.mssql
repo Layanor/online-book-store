@@ -1,0 +1,74 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.0
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:8889
+-- Generation Time: Apr 30, 2022 at 02:11 AM
+-- Server version: 5.7.34
+-- PHP Version: 8.0.8
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `online_book_store_db`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `books`
+--
+
+CREATE TABLE `books` (
+  `id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `author_id` int(11) NOT NULL,
+  `description` text NOT NULL,
+  `category_id` int(11) NOT NULL,
+  `cover` varchar(255) NOT NULL,
+  `file` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `books`
+--
+
+INSERT INTO `books` (`id`, `title`, `author_id`, `description`, `category_id`, `cover`, `file`) VALUES
+(1, 'Brain Games - Sticker Activity: There Was an Old Lady Who Swallowed the Alphabet!', 1, ' Introduce children to the alphabet in a fun, interactive way with this sticker activity book! Discover 27 activities and more than 150 stickers. Activities include matching pictures and words, finding missing letters that start the words, and adding stickers to finish the picture. Activities are in the front of the book and the corresponding stickers are in the back. Many bonus stickers are found in the book.  Children ages 3 and up will love the colorful, whimsical illustrations on each page. Follow along as the old lady makes a meal of the alphabet, one letter at a time.  The spiral binding allows the book to lie flat for easy use. 52 pages', 1, 'img/Brain Games - Sticker Activity- There Was an Old Lady Who Swallowed the Alphabet!.jpg', '6250e9bb500299.63726277.pdf'),
+(2, 'Reach for the Stars ', 2, 'From Emmy-nominated science TV star and host of Netflix’s hit series Emily’s Wonder Lab Emily Calandrelli comes an inspirational message of love and positivity.  From the moment we are born, we reach out. We reach out for our loved ones, for new knowledge and experiences, and for our dreams!  Whether celebrating life’s joyous milestones, sharing words of encouragement, or observing the wonder of the world around us, this uplifting book will inspire readers of every age. A celebration of love and shared discovery, this book will encourage readers to reach for the stars!', 5, 'img/Reach for the Stars.jpg', '6250eadbe51ce0.07208854.pdf'),
+(3, 'School Zone - First Grade Big Learning Tablet Workbook', 3, 'This one great big tablet gives children hours of colorful 1st grade learning! With the creative, colorful pages of skill-building activities in Big First Grade Learning Tablet, first-graders are introduced to a variety of lessons that expand problem solving and careful observation. By teaching critical thinking skills, primary phonics, beginner reading comprehension, and more, this great tablet prepares first graders for what comes next. It also makes a great addition and subtraction workbook, teaching kids basic math skills through fun educational games. Boost confidence and celebrate achievement with more than 20 adorable reward stickers. Who wouldn\'t like to adorn their work with a glowing light bulb proclaiming they are \"Brilliant!\"? This kind of enjoyable reinforcement learning is perfect as both a school aid, or as a great addition to kids homeschool teaching. The vertical, portrait-oriented cover makes for easy shelving or dropping into a backpack, and because it lays flat, left-handed writers will have free space on the left side.', 3, 'img/School Zone - First Grade Big Learning Tablet Workbook.jpg', '6250eb559b4ec6.52483182.pdf'),
+(4, 'The Very Hungry Caterpillar', 2, 'THE all-time classic picture book, from generation to generation, sold somewhere in the world every 30 seconds! A sturdy and beautiful book to give as a gift for new babies, baby showers, birthdays, and other new beginnings!', 4, 'img/The Very Hungry Caterpillar.png', '6250ebd90995e5.71674474.pdf'),
+(5, 'The Complete Cookbook for Young Chefs', 5, 'Want to bake the most-awesome-ever cupcakes? Or surprise your family with breakfast tacos on Sunday morning? Looking for a quick snack after school? Or maybe something special for a sleepover? It\'s all here. Learn to cook like a pro―it\'s easier than you think.', 2, 'img/The Complete Cookbook for Young Chefs.jpg', '6250ec8d79ee99.87686562.pdf');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `books`
+--
+ALTER TABLE `books`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `books`
+--
+ALTER TABLE `books`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
